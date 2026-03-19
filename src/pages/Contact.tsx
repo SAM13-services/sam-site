@@ -40,9 +40,13 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log('Contact form submitted:', form)
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
     setSubmitted(true)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }

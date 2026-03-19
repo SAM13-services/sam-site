@@ -51,9 +51,13 @@ export default function PreDemande() {
     setForm((prev) => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log('Pre-demande submitted:', form)
+    await fetch('/api/pre-demande', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
     setSubmitted(true)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
