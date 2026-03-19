@@ -72,7 +72,7 @@ export default function Hero() {
       </div>
 
       {/* Colonne droite — animation ancrée en bas, hauteur étendue */}
-      <div className="hidden md:flex flex-1 items-end pr-[50px] pb-10 pointer-events-none overflow-hidden">
+      <div className="hidden md:flex flex-1 items-end pr-[50px] pb-12 pointer-events-none overflow-hidden">
         <Suspense fallback={null}>
           <HeroAnimation className="w-full h-[82vh]" />
         </Suspense>
