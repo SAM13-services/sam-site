@@ -11,7 +11,7 @@ export default function HeroAnimation({ className }: HeroAnimationProps) {
         loop
         muted
         playsInline
-        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+        style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
       />
     </div>
   )
