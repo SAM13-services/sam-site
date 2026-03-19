@@ -9,7 +9,7 @@ export default defineConfig({
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-three': ['three', '@react-three/fiber', '@react-three/drei', '@react-spring/three'],
-          'vendor-lottie': ['@lottiefiles/dotlottie-react'],
+          'vendor-lottie': ['lottie-react'],
         },
       },
     },
