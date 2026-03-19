@@ -15,8 +15,8 @@ export default function Home() {
         <meta property="og:title" content="SAM — Subventions matériel professionnel" />
         <meta property="og:description" content="Obtenez jusqu'à 70% de subvention sur votre équipement professionnel. SAM gère tout : vérification d'éligibilité, montage de dossier, suivi CARSAT." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sam-subventions.fr/" />
-        <link rel="canonical" href="https://www.sam-subventions.fr/" />
+        <meta property="og:url" content="https://sam-contact.fr/" />
+        <link rel="canonical" href="https://sam-contact.fr/" />
       </Helmet>
       <Hero />
       <Stats />

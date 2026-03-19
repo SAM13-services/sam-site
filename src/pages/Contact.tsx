@@ -80,8 +80,8 @@ export default function Contact() {
         <meta name="description" content="Contactez l'équipe SAM pour toute question sur votre éligibilité aux subventions CARSAT. Réponse sous 24h ouvrées." />
         <meta property="og:title" content="Contact — SAM" />
         <meta property="og:description" content="Une question sur votre éligibilité ? Contactez SAM, réponse sous 24h." />
-        <meta property="og:url" content="https://www.sam-subventions.fr/contact" />
-        <link rel="canonical" href="https://www.sam-subventions.fr/contact" />
+        <meta property="og:url" content="https://sam-contact.fr/contact" />
+        <link rel="canonical" href="https://sam-contact.fr/contact" />
       </Helmet>
       <div>
 

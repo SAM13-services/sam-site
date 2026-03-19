@@ -71,8 +71,8 @@ export default function MaterielEligible() {
         <meta property="og:title" content="Matériel éligible aux subventions CARSAT — SAM" />
         <meta property="og:description" content="44 équipements professionnels subventionnés jusqu'à 70% via la CARSAT. Manutention, BTP, restauration, logistique et plus." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sam-subventions.fr/materiel" />
-        <link rel="canonical" href="https://www.sam-subventions.fr/materiel" />
+        <meta property="og:url" content="https://sam-contact.fr/materiel" />
+        <link rel="canonical" href="https://sam-contact.fr/materiel" />
       </Helmet>
 
       {/* ── Hero / En-tête ── */}

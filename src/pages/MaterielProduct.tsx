@@ -54,7 +54,7 @@ export default function MaterielProduct() {
     )
   }
 
-  const pageUrl = `https://www.sam-subventions.fr/materiel/${materiel.id}`
+  const pageUrl = `https://sam-contact.fr/materiel/${materiel.id}`
 
   return (
     <main className="min-h-screen bg-white">

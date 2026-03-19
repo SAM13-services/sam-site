@@ -108,8 +108,8 @@ export default function PreDemande() {
         <meta name="description" content="Vérifiez gratuitement votre éligibilité aux subventions CARSAT en 2 minutes. Sans engagement. SAM prend en charge toutes les démarches." />
         <meta property="og:title" content="Pré-demande gratuite — SAM" />
         <meta property="og:description" content="Vérifiez votre éligibilité aux subventions CARSAT en 2 minutes. Gratuit, sans engagement." />
-        <meta property="og:url" content="https://www.sam-subventions.fr/pre-demande" />
-        <link rel="canonical" href="https://www.sam-subventions.fr/pre-demande" />
+        <meta property="og:url" content="https://sam-contact.fr/pre-demande" />
+        <link rel="canonical" href="https://sam-contact.fr/pre-demande" />
       </Helmet>
       <div className="max-w-2xl mx-auto">
 
