@@ -1,9 +1,10 @@
+import { lazy, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { HERO } from '../../config/constants'
 import Button from '../ui/Button'
 import Badge from '../ui/Badge'
-import HeroAnimation from '../HeroAnimation'
+const HeroAnimation = lazy(() => import('../HeroAnimation'))
 
 export default function Hero() {
   const navigate = useNavigate()
@@ -72,7 +73,9 @@ export default function Hero() {
 
       {/* Colonne droite — animation ancrée en bas, hauteur étendue */}
       <div className="hidden md:flex flex-1 items-end pr-[50px] pb-10 pointer-events-none overflow-hidden">
-        <HeroAnimation className="w-full h-[82vh]" />
+        <Suspense fallback={null}>
+          <HeroAnimation className="w-full h-[82vh]" />
+        </Suspense>
       </div>
 
     </section>
