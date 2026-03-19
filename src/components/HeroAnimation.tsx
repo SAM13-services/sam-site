@@ -23,8 +23,13 @@ export default function HeroAnimation({ className }: HeroAnimationProps) {
         animationData={animationData}
         loop={true}
         autoplay={true}
+        renderer="canvas"
         style={{ width: '100%', height: '100%' }}
-        rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+        rendererSettings={{
+          preserveAspectRatio: 'xMidYMid meet',
+          progressiveLoad: true,
+          hideOnTransparent: true,
+        }}
       />
     </div>
   )
