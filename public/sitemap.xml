@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://www.sam-subventions.fr/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.sam-subventions.fr/materiel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sam-subventions.fr/pre-demande</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sam-subventions.fr/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Pages produits -->
+  <url><loc>https://www.sam-subventions.fr/materiel/leve-personnes-rails</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/potence-levage-fixe</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/portique-levage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/pont-roulant</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/palonnier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/prehenseur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/tube-levage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/monte-meubles</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/monte-plats</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/monte-materiaux</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/tracteur-pousseur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/timon-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/roues-motorisees</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/diable-monte-escalier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/brouette-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/transpalette-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/gerbeur-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/chariot-conducteur-porte</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/roll-niveau-constant</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/bac-niveau-constant</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/chariot-picking-niveau-constant</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/table-elevatrice-motorisee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/table-elevatrice-veterinaire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/table-elevatrice-sport</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/table-elevatrice-medicale</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/table-elevatrice-puericulture</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/plateforme-maconner</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/recette-materiaux</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/meuleuse-portative</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/ponceuse-polisseuse</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/machine-serrage-portative</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/siege-suspension</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/compactage-telecemmande</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/demolition-electrique-telecemmande</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/filmeuse-housseuse</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/pont-de-carrossier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/bachage-debachage-automatique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/auto-laveuse-compacte</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/demonte-pneus-equilibreuse-leve-roues</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/lave-verres-osmoseur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/bac-shampoing-siege-coupe-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/vitrine-metiers-bouche</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/rails-manutention-carcasses</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.sam-subventions.fr/materiel/leve-lit-electrique</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
