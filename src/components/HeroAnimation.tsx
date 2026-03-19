@@ -1,5 +1,3 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-
 interface HeroAnimationProps {
   className?: string
 }
@@ -7,11 +5,13 @@ interface HeroAnimationProps {
 export default function HeroAnimation({ className }: HeroAnimationProps) {
   return (
     <div className={className}>
-      <DotLottieReact
-        src="/animations/hero-export.lottie"
+      <video
+        src="/animations/export-hero.mp4"
+        autoPlay
         loop
-        autoplay
-        style={{ width: '100%', height: '100%' }}
+        muted
+        playsInline
+        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
       />
     </div>
   )
