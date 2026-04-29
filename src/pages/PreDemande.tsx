@@ -8,13 +8,13 @@ import Button from '../components/ui/Button'
 import RadioGroup from '../components/ui/RadioGroup'
 import { FormInput } from '../components/ui/FormInput'
 import AnimatedSection from '../components/ui/AnimatedSection'
+import CompanySearch from '../components/ui/CompanySearch'
 
 interface FormState {
   societe: string
   siret: string
   nom: string
   prenom: string
-  fonction: string
   email: string
   telephone: string
   tva: string
@@ -27,7 +27,7 @@ interface FormState {
 }
 
 const initialState: FormState = {
-  societe: '', siret: '', nom: '', prenom: '', fonction: '',
+  societe: '', siret: '', nom: '', prenom: '',
   email: '', telephone: '', tva: '', cotisations: '', duerp: '',
   salaries: '', effectif: '', spst: '', spstName: '',
 }
@@ -42,13 +42,40 @@ function Fade({ children }: { children: React.ReactNode }) {
   )
 }
 
+type ErrorState = Partial<Record<keyof FormState, string>>
+
+function validateEmail(v: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)
+}
+function validateSiret(v: string) {
+  return /^\d{14}$/.test(v.replace(/\s/g, ''))
+}
+function validatePhone(v: string) {
+  return /^(\+33|0)[1-9](\s?\d{2}){4}$/.test(v.replace(/[\s.\-]/g, ''))
+}
+
 export default function PreDemande() {
   const navigate = useNavigate()
   const [form, setForm] = useState<FormState>(initialState)
+  const [errors, setErrors] = useState<ErrorState>({})
   const [submitted, setSubmitted] = useState(false)
 
   const updateField = (field: keyof FormState) => (value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }))
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }))
+  }
+
+  const validateField = (field: keyof FormState, value: string) => {
+    let msg: string | undefined
+    if (field === 'email' && value && !validateEmail(value))
+      msg = 'Email invalide — vérifiez le format (ex : jean@societe.fr)'
+    if (field === 'siret' && value && !validateSiret(value))
+      msg = 'SIRET invalide — 14 chiffres requis'
+    if (field === 'telephone' && value && !validatePhone(value))
+      msg = 'Téléphone invalide — format attendu : 06 XX XX XX XX'
+    if (field === 'nom' && !value.trim())
+      msg = 'Le nom est requis'
+    setErrors((prev) => ({ ...prev, [field]: msg }))
   }
 
   const handleSubmit = async (e: FormEvent) => {
@@ -66,8 +93,7 @@ export default function PreDemande() {
   const show = {
     siret:       form.societe.trim() !== '',
     contact:     form.siret.trim() !== '',
-    fonction:    form.nom.trim() !== '' || form.prenom.trim() !== '',
-    email:       form.nom.trim() !== '' && form.prenom.trim() !== '',
+    email:       form.nom.trim() !== '',
     telephone:   form.email.trim() !== '',
     eligibilite: form.telephone.trim() !== '',
     cotisations: form.tva !== '',
@@ -145,13 +171,18 @@ export default function PreDemande() {
               <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 bg-sam-gray-bg px-3 py-2">
                 Informations société
               </h2>
-              <FormInput
-                label="Société"
-                name="societe"
+              <CompanySearch
                 value={form.societe}
-                onChange={(e) => updateField('societe')(e.target.value)}
-                required
-                placeholder="Nom de votre société"
+                onChange={updateField('societe')}
+                onSelect={({ name, siret, nom, prenom }) => {
+                  setForm((prev) => ({
+                    ...prev,
+                    societe: name,
+                    siret,
+                    ...(nom ? { nom } : {}),
+                    ...(prenom ? { prenom } : {}),
+                  }))
+                }}
               />
               {show.siret && (
                 <Fade key="siret">
@@ -160,6 +191,8 @@ export default function PreDemande() {
                     name="siret"
                     value={form.siret}
                     onChange={(e) => updateField('siret')(e.target.value)}
+                    onBlur={(e) => validateField('siret', e.target.value)}
+                    error={errors.siret}
                     required
                     placeholder="14 chiffres"
                     maxLength={14}
@@ -181,6 +214,8 @@ export default function PreDemande() {
                       name="nom"
                       value={form.nom}
                       onChange={(e) => updateField('nom')(e.target.value)}
+                      onBlur={(e) => validateField('nom', e.target.value)}
+                      error={errors.nom}
                       required
                       placeholder="Dupont"
                     />
@@ -189,21 +224,9 @@ export default function PreDemande() {
                       name="prenom"
                       value={form.prenom}
                       onChange={(e) => updateField('prenom')(e.target.value)}
-                      required
                       placeholder="Jean"
                     />
                   </div>
-                  {show.fonction && (
-                    <Fade key="fonction">
-                      <FormInput
-                        label="Fonction"
-                        name="fonction"
-                        value={form.fonction}
-                        onChange={(e) => updateField('fonction')(e.target.value)}
-                        placeholder="Gérant, Directeur, RH…"
-                      />
-                    </Fade>
-                  )}
                   {show.email && (
                     <Fade key="email">
                       <FormInput
@@ -212,6 +235,8 @@ export default function PreDemande() {
                         type="email"
                         value={form.email}
                         onChange={(e) => updateField('email')(e.target.value)}
+                        onBlur={(e) => validateField('email', e.target.value)}
+                        error={errors.email}
                         required
                         placeholder="jean.dupont@societe.fr"
                       />
@@ -225,6 +250,8 @@ export default function PreDemande() {
                         type="tel"
                         value={form.telephone}
                         onChange={(e) => updateField('telephone')(e.target.value)}
+                        onBlur={(e) => validateField('telephone', e.target.value)}
+                        error={errors.telephone}
                         required
                         placeholder="+33 6 XX XX XX XX"
                       />

@@ -55,6 +55,7 @@ export default {
         'fade-up': 'fadeUp 0.6s ease-out forwards',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
         'slide-in-right': 'slideInRight 0.3s ease-out forwards',
+        'shake': 'shake 0.4s ease-in-out',
       },
       keyframes: {
         fadeUp: {
@@ -68,6 +69,13 @@ export default {
         slideInRight: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '15%':       { transform: 'translateX(-5px)' },
+          '45%':       { transform: 'translateX(5px)' },
+          '75%':       { transform: 'translateX(-3px)' },
+          '90%':       { transform: 'translateX(2px)' },
         },
       },
     },
