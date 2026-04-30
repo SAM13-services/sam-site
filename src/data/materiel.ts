@@ -1140,7 +1140,7 @@ export const CATALOGUE: Materiel[] = [
   },
 
   {
-    id: 'compactage-telecemmande',
+    id: 'compactage-telecommande',
     nom: 'Matériels de compactage télécommandés',
     description: 'Engins de compactage télécommandés.',
     descriptionComplete: 'Les engins de compactage télécommandés (plaques vibrantes, rouleaux tandem) permettent à l\'opérateur de rester à distance de la source vibratoire. Cette suppression à la source est la mesure de prévention la plus efficace contre les vibrations corps entier et main-bras sur les chantiers de voirie et terrassement.',
@@ -1173,7 +1173,7 @@ export const CATALOGUE: Materiel[] = [
   },
 
   {
-    id: 'demolition-electrique-telecemmande',
+    id: 'demolition-electrique-telecommande',
     nom: 'Matériels de démolition électriques télécommandés',
     description: 'Robots de démolition télécommandés.',
     descriptionComplete: 'Les robots de démolition électriques télécommandés permettent d\'effectuer des travaux de démolition (piquage, cassage, dépose) à distance, supprimant l\'exposition aux vibrations, à la poussière et aux risques de chute de matériaux pour l\'opérateur. Ils sont particulièrement adaptés aux travaux en espaces confinés ou en hauteur.',
