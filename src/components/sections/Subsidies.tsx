@@ -12,7 +12,7 @@ export default function Subsidies() {
   const [current, setCurrent]     = useState(0)
   const [isDesktop, setIsDesktop] = useState(false)
   const containerRef              = useRef<HTMLDivElement>(null)
-  const [cardW, setCardW]         = useState(0)
+  const [containerW, setContainerW] = useState(0)
   const touchStartX               = useRef<number | null>(null)
 
   // Detect breakpoint
@@ -23,18 +23,22 @@ export default function Subsidies() {
     return () => window.removeEventListener('resize', update)
   }, [])
 
-  // Measure container to compute card width
+  // Measure container width
   useLayoutEffect(() => {
     const measure = () => {
       if (!containerRef.current) return
-      const w = containerRef.current.offsetWidth
-      setCardW((w - GAP * (DESKTOP_VISIBLE - 1)) / DESKTOP_VISIBLE)
+      setContainerW(containerRef.current.offsetWidth)
     }
     measure()
     const ro = new ResizeObserver(measure)
     if (containerRef.current) ro.observe(containerRef.current)
     return () => ro.disconnect()
   }, [])
+
+  const activeGap    = isDesktop ? GAP : 0
+  const desktopCardW = containerW > 0 ? (containerW - GAP * (DESKTOP_VISIBLE - 1)) / DESKTOP_VISIBLE : 0
+  const mobileCardW  = containerW
+  const activeCardW  = isDesktop ? desktopCardW : mobileCardW
 
   const max     = isDesktop ? MAX_DESKTOP : MAX_MOBILE
   const isFirst = current === 0
@@ -53,8 +57,8 @@ export default function Subsidies() {
     touchStartX.current = null
   }
 
-  const desktopOffset = Math.min(current, MAX_DESKTOP) * (cardW + GAP)
-  const mobileOffset  = current * (cardW * DESKTOP_VISIBLE + GAP * (DESKTOP_VISIBLE - 1))
+  const desktopOffset = Math.min(current, MAX_DESKTOP) * (desktopCardW + GAP)
+  const mobileOffset  = current * mobileCardW  // gap=0 on mobile → no extra offset
 
   return (
     <section id="subsidies" className="bg-sam-gray-bg py-14 md:py-18">
@@ -107,7 +111,7 @@ export default function Subsidies() {
           <div
             className="flex"
             style={{
-              gap: `${GAP}px`,
+              gap: `${activeGap}px`,
               transform: `translateX(${-(isDesktop ? desktopOffset : mobileOffset)}px)`,
               transition: 'transform 0.4s ease-out',
             }}
@@ -118,7 +122,7 @@ export default function Subsidies() {
               <div
                 key={sub.id}
                 className="shrink-0"
-                style={{ width: cardW > 0 ? `${cardW}px` : `calc((100% - ${GAP * (DESKTOP_VISIBLE - 1)}px) / ${DESKTOP_VISIBLE})` }}
+                style={{ width: activeCardW > 0 ? `${activeCardW}px` : '100%' }}
               >
                 <SubsidyCard sub={sub} />
               </div>
