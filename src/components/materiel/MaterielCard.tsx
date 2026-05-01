@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import type { Materiel } from '../../types/materiel'
 import MaterielSilhouette from './MaterielSilhouette'
@@ -10,13 +10,10 @@ interface Props {
 }
 
 function MaterielCard({ materiel, delay = 0 }: Props) {
-  const navigate = useNavigate()
-  const handleClick = () => navigate(`/materiel/${materiel.id}`)
-
   return (
-    <div
-      onClick={handleClick}
-      className="group cursor-pointer"
+    <Link
+      to={`/materiel/${materiel.id}`}
+      className="group cursor-pointer block no-underline text-inherit"
       style={{
         animation: 'fadeUp 0.5s ease-out forwards',
         opacity: 0,
@@ -43,7 +40,7 @@ function MaterielCard({ materiel, delay = 0 }: Props) {
       <p className="text-sm text-gray-400 leading-snug line-clamp-1">
         {materiel.description}
       </p>
-    </div>
+    </Link>
   )
 }
 

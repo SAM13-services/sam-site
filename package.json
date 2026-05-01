@@ -6,7 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "postbuild": "react-snap || true",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "skipThirdPartyRequests": true,
+    "puppeteerExecutablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+    "include": [
+      "/materiel/leve-personnes-rails","/materiel/potence-levage-fixe","/materiel/portique-levage","/materiel/pont-roulant","/materiel/palonnier","/materiel/prehenseur","/materiel/tube-levage","/materiel/monte-meubles","/materiel/monte-plats","/materiel/monte-materiaux","/materiel/tracteur-pousseur","/materiel/timon-electrique","/materiel/roues-motorisees","/materiel/diable-monte-escalier","/materiel/brouette-electrique","/materiel/transpalette-electrique","/materiel/gerbeur-electrique","/materiel/chariot-conducteur-porte","/materiel/roll-niveau-constant","/materiel/bac-niveau-constant","/materiel/chariot-picking-niveau-constant","/materiel/table-elevatrice-motorisee","/materiel/table-elevatrice-veterinaire","/materiel/table-elevatrice-sport","/materiel/table-elevatrice-medicale","/materiel/table-elevatrice-puericulture","/materiel/plateforme-maconner","/materiel/recette-materiaux","/materiel/meuleuse-portative","/materiel/ponceuse-polisseuse","/materiel/machine-serrage-portative","/materiel/siege-suspension","/materiel/compactage-telecommande","/materiel/demolition-electrique-telecommande","/materiel/filmeuse-housseuse","/materiel/pont-de-carrossier","/materiel/bachage-debachage-automatique","/materiel/auto-laveuse-compacte","/materiel/demonte-pneus-equilibreuse-leve-roues","/materiel/lave-verres-osmoseur","/materiel/bac-shampoing-siege-coupe-electrique","/materiel/vitrine-metiers-bouche","/materiel/rails-manutention-carcasses","/materiel/leve-lit-electrique"
+    ]
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.18.7",
@@ -30,6 +40,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.0",
     "vite": "^4.5.0"
