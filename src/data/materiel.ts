@@ -1557,6 +1557,537 @@ export const CATALOGUE: Materiel[] = [
     },
     distributeurs: [],
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // PRÉVENTION CHUTE
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'revetement-sol-antiderapant',
+    nom: 'Revêtement de sol antidérapant nettoyable',
+    description: 'Sol antidérapant certifié CNAM R46-2A pour locaux alimentaires.',
+    descriptionComplete: 'Revêtement de sol antidérapant et nettoyable destiné aux locaux alimentaires : fabrication, manipulation, conditionnement ou stockage de produits alimentaires, cuisines de restauration et restauration collective. Le sol doit figurer sur la liste limitative CNAM garantissant un coefficient de frottement dynamique μd ≥ 0,30. Pour les sols coulés (mortier, résine), le poseur doit être référencé ou une attestation fabricant fournie. La mise en place implique l\'équipement en moyen de nettoyage renforcé (laveuse de sol).',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'sols-antiderapants',
+    secteurs: ['restauration-metiers-bouche', 'industrie', 'logistique-entreposage'],
+    icon: 'Layers',
+    eligibilite: {
+      conception: [
+        'Figurant sur la liste limitative CNAM des sols sécurisés pour l\'agroalimentaire',
+        'Coefficient de frottement dynamique μd ≥ 0,30 garanti',
+        'Pour sols coulés : poseur/applicateur référencé par le fabricant',
+      ],
+      formation: [
+        'Attestation du fabricant justifiant l\'aptitude du poseur si non référencé',
+      ],
+      amenagement: [
+        'Locaux couverts : fabrication, manipulation, conditionnement, stockage de produits alimentaires',
+        'Locaux adjacents à risque de transfert (couloirs, escaliers, zones administratives intégrées)',
+        'Cuisines de restauration et restauration collective en entreprise',
+        'Prévoir un équipement de nettoyage renforcé (laveuse de sol) — les sols antidérapants ne se nettoient pas à la raclette',
+      ],
+      exclusions: [
+        'Sols ne figurant pas sur la liste limitative CNAM',
+        'Locaux sans lien avec la manipulation de produits alimentaires',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'pir-plateforme-roulante',
+    nom: 'PIR — Plateforme Individuelle Roulante',
+    description: 'Plateforme roulante NF pour travail en hauteur sécurisé.',
+    descriptionComplete: 'La PIR (Plateforme Individuelle Roulante) est un équipement de travail en hauteur mobile permettant d\'accéder en sécurité à des postes élevés. Elle doit être neuve, admise à la marque NF et conforme à la norme NF P 93-352 : 2016.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'industrie', 'restauration-metiers-bouche', 'tous-secteurs'],
+    icon: 'ArrowUp',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Admis à la marque NF',
+        'Conforme à la norme NF P 93-352 : 2016',
+      ],
+      formation: [
+        'Attestation sur l\'honneur du chef d\'entreprise de délivrance d\'une information sur les risques',
+        'Formation des salariés au montage et à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Équipements sans marque NF',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'pirl-plateforme-roulante-legere',
+    nom: 'PIRL — Plateforme Individuelle Roulante Légère',
+    description: 'Plateforme roulante légère NF pour accès en hauteur.',
+    descriptionComplete: 'La PIRL (Plateforme Individuelle Roulante Légère) est une version allégée de la PIR, adaptée aux espaces plus réduits. Elle doit être neuve, admise à la marque NF et conforme à la norme NF P 93-353 : 2016.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'restauration-metiers-bouche', 'industrie', 'tous-secteurs'],
+    icon: 'ArrowUp',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Admis à la marque NF',
+        'Conforme à la norme NF P 93-353 : 2016',
+      ],
+      formation: [
+        'Attestation sur l\'honneur du chef d\'entreprise de délivrance d\'une information sur les risques',
+        'Formation des salariés au montage et à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Équipements sans marque NF',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'micro-pemp-nacelle',
+    nom: 'Micro PEMP — Nacelle élévatrice compacte',
+    description: 'Micro-nacelle électrique ≤ 90 cm pour accès en hauteur par une porte.',
+    descriptionComplete: 'La micro PEMP (Plateforme Élévatrice Mobile de Personnes) de faible largeur est une nacelle compacte permettant de travailler en hauteur dans des espaces confinés. Elle doit mesurer 90 cm de large maximum pour passer par une porte standard, être équipée d\'une motorisation électrique et être conforme à la directive machines 2006/42/CE et aux normes NF EN 280-1 et NF EN 280-2 : 2022.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'industrie', 'construction-btp', 'tous-secteurs'],
+    icon: 'ArrowUp',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Type : micro-nacelle ciseaux sur mâts, à bras, ou micro-nacelle araignée',
+        'Largeur maximale 90 cm (passage de porte)',
+        'Motorisation électrique',
+        'Conforme à la directive machines 2006/42/CE',
+        'Conforme aux normes NF EN 280-1 : 2022 et NF EN 280-2 : 2022',
+      ],
+      formation: [
+        'Attestation sur l\'honneur du chef d\'entreprise de délivrance d\'une information sur les risques',
+        'Formation des salariés à l\'utilisation (référence : recommandation CACES R486)',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Largeur supérieure à 90 cm',
+        'Motorisation thermique',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'emer-mise-en-rayon',
+    nom: 'EMER — Équipement Mobile de Mise en Rayon',
+    description: 'Plateforme sécurisée de mise en rayon jusqu\'à 0,5 m de hauteur.',
+    descriptionComplete: 'L\'EMER (Équipement Mobile de Mise en Rayon) est une plateforme individuelle créant un espace de travail sécurisé d\'une hauteur maximale de 0,5 m (0,3 m lorsqu\'elle ne possède qu\'une seule marche). Destinée à la mise en rayon en grande distribution ou commerce, elle doit être neuve et conforme à la norme NF E85-301 : 2020.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['restauration-metiers-bouche', 'logistique-entreposage', 'industrie'],
+    icon: 'Package',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Hauteur de travail maximale 0,5 m (0,3 m si une seule marche)',
+        'Conforme à la norme NF E85-301 : 2020',
+      ],
+      formation: [
+        'Attestation sur l\'honneur du chef d\'entreprise de délivrance d\'une information sur les risques',
+        'Formation des salariés à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Hauteur de travail supérieure à 0,5 m',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'barriere-ecluse-securite',
+    nom: 'Barrière écluse de sécurité',
+    description: 'Sas de protection collective pour manutentions en hauteur sur plateforme.',
+    descriptionComplete: 'La barrière écluse est une protection collective formant un sas sécurisé lors des transferts de marchandises en hauteur. Elle garantit la sécurité des opérateurs sur la plateforme en évitant tout risque de chute lors des opérations de manutention. L\'équipement doit être neuf et conforme à la norme NF EN ISO 14122-3 : 2017.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'industrie', 'tous-secteurs'],
+    icon: 'Shield',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Conforme à la norme NF EN ISO 14122-3 : 2017',
+        'Forme un sas garantissant la sécurité des opérateurs sur la plateforme',
+      ],
+      formation: [
+        'Attestation sur l\'honneur du chef d\'entreprise de délivrance d\'une information sur les risques',
+        'Formation des salariés à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'garde-corps-prevention',
+    nom: 'Garde-corps',
+    description: 'Protection collective contre les chutes de hauteur, pour plateformes et machines.',
+    descriptionComplete: 'Le garde-corps est une protection collective destinée à prévenir les chutes de hauteur. Il doit être neuf et conforme à la norme NF E85-015 pour les usages généraux, ou à la norme NF EN ISO 14122-3 : 2017 lorsqu\'il équipe des machines. Il s\'installe en bordure de plateformes, mezzanines, passerelles ou de part et d\'autre d\'un élément de liaison de quai.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'industrie', 'construction-btp', 'transport', 'tous-secteurs'],
+    icon: 'Shield',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Conforme à la norme NF E85-015 (usage général)',
+        'Ou conforme à la norme NF EN ISO 14122-3 : 2017 (garde-corps sur machines)',
+      ],
+      formation: [],
+      amenagement: [
+        'Installé en bordure de zone exposant au risque de chute de hauteur',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'passerelle-securisee',
+    nom: 'Passerelle sécurisée',
+    description: 'Passerelle de circulation sécurisée entre zones en hauteur.',
+    descriptionComplete: 'La passerelle sécurisée est un équipement de circulation permettant de relier deux zones en hauteur en toute sécurité. Elle doit être neuve et conforme à la norme NF E 85-014 pour les usages généraux, ou à la norme NF EN ISO 14122-2 : 2017 lorsqu\'elle sert d\'accès à des machines.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['logistique-entreposage', 'industrie', 'construction-btp', 'tous-secteurs'],
+    icon: 'GitBranch',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Conforme à la norme NF E 85-014 (usage général)',
+        'Ou conforme à la norme NF EN ISO 14122-2 : 2017 (accès aux machines)',
+      ],
+      formation: [],
+      amenagement: [],
+      exclusions: [
+        'Équipements d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'grille-anti-chutes-lanterneau',
+    nom: 'Grille anti-chutes pour lanterneau',
+    description: 'Grille de protection sous lanterneau, résistance minimale 1 200 joules.',
+    descriptionComplete: 'La grille anti-chutes pour lanterneau est un dispositif de protection installé sous une verrière ou un lanterneau afin d\'arrêter la chute d\'une personne en cas de bris de la surface vitrée. L\'équipement doit être neuf et garantir une résistance minimale de 1 200 joules.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['industrie', 'logistique-entreposage', 'construction-btp', 'tous-secteurs'],
+    icon: 'Grid',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Résistance minimale garantie de 1 200 joules',
+      ],
+      formation: [],
+      amenagement: [
+        'Installation sous lanterneau ou verrière exposant à un risque de chute à travers la surface vitrée',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Résistance inférieure à 1 200 joules',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'dispositif-jonction-quai-camion',
+    nom: 'Dispositif motorisé de jonction quai–camion',
+    description: 'Ensemble niveleur + pont motorisé + tampons + garde-corps pour quai sécurisé.',
+    descriptionComplete: 'Le dispositif motorisé de jonction quai–camion est un ensemble complet de sécurisation des opérations de chargement/déchargement. Il comprend obligatoirement : un niveleur à lèvre télescopique (course min. 800 mm, appui min. 150 mm), un pont de liaison motorisé (appui min. 150 mm), des tampons/butées de quai (espace de sauvegarde 500 mm) et des garde-corps latéraux. L\'ensemble doit être conforme à la directive 2006/42/CE. Référence : brochure INRS ED 6059.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'Truck',
+    eligibilite: {
+      conception: [
+        'Niveleur à lèvre télescopique : course minimum 800 mm, intégré dans le quai ou sur châssis solidaire, appui minimal 150 mm sur plancher du véhicule',
+        'Pont de liaison motorisé : solidaire du quai, appui minimal 150 mm sur plancher du véhicule',
+        'Tampons / butées de quai : espace de sauvegarde de 500 mm entre véhicule et structure du quai',
+        'Garde-corps installés de part et d\'autre de l\'élément de liaison',
+        'Conforme à la directive machines 2006/42/CE et aux normes de référence',
+      ],
+      formation: [],
+      amenagement: [
+        'Référence documentaire : brochure INRS ED 6059 « conception et rénovation des quais »',
+      ],
+      exclusions: [
+        'Dispositifs non motorisés',
+        'Ensemble incomplet (les 4 composants sont obligatoires)',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'calage-blocage-vehicule',
+    nom: 'Dispositif de calage et blocage du véhicule',
+    description: 'Système asservi de calage/blocage du camion pendant les opérations de quai.',
+    descriptionComplete: 'Le dispositif asservi de calage et blocage du véhicule empêche le départ intempestif d\'un camion lors des opérations de chargement/déchargement. Il peut être automatique ou à positionnement manuel, avec asservissement entre la mise à quai et le système de liaison quai/camion, et une alerte sonore et visuelle intégrée. Conforme à la directive 2006/42/CE. Référence : brochure INRS ED 6059.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'Lock',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Système automatique ou à positionnement manuel',
+        'Asservissement entre mise à quai effective et fonctionnement du système de liaison quai/camion',
+        'Alerte sonore et visuelle intégrée en cas de perte d\'information',
+        'Conforme à la directive machines 2006/42/CE',
+      ],
+      formation: [],
+      amenagement: [
+        'Référence documentaire : brochure INRS ED 6059 « conception et rénovation des quais »',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Systèmes sans asservissement',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'barriere-quai-motorisee',
+    nom: 'Barrière de quai motorisée',
+    description: 'Barrière motorisée asservie à la présence du véhicule, anti-chute personne/engin.',
+    descriptionComplete: 'La barrière de quai motorisée est un dispositif anti-chutes pour personnes et engins. Elle doit être neuve, motorisée et asservie à la présence effective d\'un véhicule sur le quai, implantée pour ne laisser aucun espace d\'accès au vide, et résister à la chute d\'une personne — et si besoin d\'un engin de manutention. Référence : brochure INRS ED 6059.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'Shield',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Motorisée et asservie à la présence effective d\'un véhicule sur le quai',
+        'Implantée pour ne laisser aucun espace d\'accès au vide',
+        'Résistance à la chute d\'une personne (et d\'un engin si nécessaire)',
+      ],
+      formation: [],
+      amenagement: [
+        'Référence documentaire : brochure INRS ED 6059 « conception et rénovation des quais »',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Barrières non motorisées',
+        'Barrières non asservies à la présence du véhicule',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'porte-sectionnelle-quai',
+    nom: 'Porte sectionnelle automatique (quai)',
+    description: 'Porte motorisée asservie au véhicule, conforme directive machines.',
+    descriptionComplete: 'La porte sectionnelle automatique est un dispositif anti-chutes pour quai de chargement. Elle doit être neuve, motorisée, asservie à la présence effective d\'un véhicule sur le quai et conforme à la directive machines 2006/42/CE. Référence : brochure INRS ED 6059.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'DoorOpen',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Motorisée et asservie à la présence effective d\'un véhicule sur le quai',
+        'Conforme à la directive machines 2006/42/CE',
+      ],
+      formation: [],
+      amenagement: [
+        'Référence documentaire : brochure INRS ED 6059 « conception et rénovation des quais »',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Portes non asservies à la présence du véhicule',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'butees-roues-quai',
+    nom: 'Butées de roues (quai)',
+    description: 'Butées empêchant la chute d\'un engin de manutention en bord de quai.',
+    descriptionComplete: 'Les butées de roues sont des dispositifs anti-chutes destinés à s\'opposer à la chute d\'un engin de manutention (chariot élévateur, transpalette) au bord d\'un quai. Elles doivent être neuves. Références : brochure INRS ED 6059 et article R4323-59 du Code du Travail.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'CircleOff',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Capacité à s\'opposer à la chute d\'un engin de manutention',
+      ],
+      formation: [],
+      amenagement: [
+        'Références : brochure INRS ED 6059 — article R4323-59 du Code du Travail',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'escalier-acces-quai',
+    nom: 'Escalier d\'accès au quai',
+    description: 'Escalier neuf côté conducteur avec protections anti-chute.',
+    descriptionComplete: 'L\'escalier d\'accès au quai est un équipement permettant aux conducteurs d\'accéder et de descendre du quai en toute sécurité. Il doit être neuf, droit ou à défaut à courbe balancée, implanté côté conducteur et équipé de protections contre les chutes de hauteur. Référence : brochure INRS ED 6059.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-quais',
+    secteurs: ['logistique-entreposage', 'transport', 'industrie'],
+    icon: 'ArrowDown',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Escalier droit ou à défaut à courbe balancée',
+        'Implanté côté conducteur',
+        'Équipé de protections contre les chutes de hauteur',
+      ],
+      formation: [],
+      amenagement: [
+        'Référence documentaire : brochure INRS ED 6059 « conception et rénovation des quais »',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'protection-laterale-hayon',
+    nom: 'Protection collective latérale solidaire du hayon',
+    description: 'Garde-corps latéral intégrant la commande du hayon élévateur.',
+    descriptionComplete: 'La protection collective latérale solidaire du hayon est un dispositif de sécurité pour poids lourds permettant d\'éviter les chutes lors des opérations de chargement/déchargement avec hayon élévateur. Elle doit être neuve, solidaire du hayon et intégrer la commande du hayon. Référence : brochures INRS ED 6095 et ED 6189.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-camions',
+    secteurs: ['transport', 'logistique-entreposage'],
+    icon: 'Shield',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Solidaire du hayon élévateur',
+        'Intègre la commande du hayon',
+      ],
+      formation: [],
+      amenagement: [
+        'Références : INRS ED 6095 « transport routier de marchandises » — INRS ED 6189 « rouler et manutentionner en sécurité »',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Dispositifs non solidaires du hayon',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'marchepied-escamotable-remorque',
+    nom: 'Marche pied escamotable pour remorque',
+    description: 'Escalier ou marchepied escamotable antidérapant pour accéder à la remorque.',
+    descriptionComplete: 'Le marche pied escamotable pour remorque permet d\'accéder en sécurité à l\'arrière ou sur le côté d\'une remorque. L\'équipement doit être neuf, escamotable, constitué de marches larges et antidérapantes. Références : brochures INRS ED 6095 et ED 6189.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-camions',
+    secteurs: ['transport', 'logistique-entreposage'],
+    icon: 'Footprints',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Escamotable',
+        'Marches larges et antidérapantes',
+        'Accès à l\'arrière ou sur le côté de la remorque',
+      ],
+      formation: [],
+      amenagement: [
+        'Références : INRS ED 6095 — INRS ED 6189',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Équipements fixes non escamotables',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'sellette-securite',
+    nom: 'Sellette de sécurité',
+    description: 'Sellette 3 capteurs à ouverture automatique depuis la cabine.',
+    descriptionComplete: 'La sellette de sécurité est un dispositif de raccordement sécurisé entre la remorque et la cabine du tracteur. Elle doit être neuve, équipée de 3 capteurs et à ouverture automatique depuis la cabine, évitant ainsi au chauffeur d\'avoir à descendre pour vérifier ou décrocher l\'attelage. Références : brochures INRS ED 6095 et ED 6189.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-camions',
+    secteurs: ['transport'],
+    icon: 'Link',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'À 3 capteurs',
+        'Ouverture automatique depuis la cabine',
+      ],
+      formation: [],
+      amenagement: [
+        'Références : INRS ED 6095 — INRS ED 6189',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Sellettes sans capteurs ou sans ouverture automatique',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'bras-suiveur-raccordement',
+    nom: 'Bras suiveur (raccordement remorque/cabine)',
+    description: 'Bras coulissant monté sur remorque pour raccorder les flexibles depuis le sol.',
+    descriptionComplete: 'Le bras suiveur est un dispositif de raccordement sécurisé permettant au chauffeur de connecter les flexibles pneumatiques entre la remorque et la cabine sans avoir à grimper sur le véhicule. Il doit être neuf, monté sur la remorque et coulissant. Références : brochures INRS ED 6095 et ED 6189.',
+    subvention: 'PREVENTION_CHUTE',
+    categorie: 'securite-camions',
+    secteurs: ['transport'],
+    icon: 'GitMerge',
+    eligibilite: {
+      conception: [
+        'Équipement neuf',
+        'Monté sur la remorque',
+        'Coulissant',
+        'Permet le raccordement des flexibles depuis le sol',
+      ],
+      formation: [],
+      amenagement: [
+        'Références : INRS ED 6095 — INRS ED 6189',
+      ],
+      exclusions: [
+        'Équipements d\'occasion',
+        'Dispositifs fixes non coulissants',
+      ],
+    },
+    distributeurs: [],
+  },
 ]
 
 export function filterCatalogue(

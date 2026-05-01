@@ -1,4 +1,4 @@
-export type Subvention = 'FIPU' | 'TOP_BTP' | 'POUSSIERE_FARINE'
+export type Subvention = 'FIPU' | 'TOP_BTP' | 'POUSSIERE_FARINE' | 'PREVENTION_CHUTE'
 
 export type Categorie =
   | 'equipements-transfert'
@@ -6,6 +6,10 @@ export type Categorie =
   | 'plans-travail-reglables'
   | 'outils-portatifs-vibrations'
   | 'equipements-specifiques'
+  | 'sols-antiderapants'
+  | 'travail-en-hauteur'
+  | 'securite-quais'
+  | 'securite-camions'
 
 export type Secteur =
   | 'sanitaire-medico-social'
@@ -55,6 +59,10 @@ export const CATEGORIE_LABELS: Record<Categorie, string> = {
   'plans-travail-reglables': 'Plans de travail réglables',
   'outils-portatifs-vibrations': 'Outils portatifs & Anti-vibrations',
   'equipements-specifiques': 'Équipements spécifiques',
+  'sols-antiderapants': 'Sols antidérapants',
+  'travail-en-hauteur': 'Travail en hauteur',
+  'securite-quais': 'Sécurité des quais',
+  'securite-camions': 'Sécurité des camions',
 }
 
 export const SECTEUR_LABELS: Record<Secteur, string> = {
@@ -79,4 +87,5 @@ export const SUBVENTION_LABELS: Record<Subvention, string> = {
   FIPU: 'FIPU',
   TOP_BTP: 'TOP BTP',
   POUSSIERE_FARINE: 'Poussière de Farine',
+  PREVENTION_CHUTE: 'Prévention chute',
 }

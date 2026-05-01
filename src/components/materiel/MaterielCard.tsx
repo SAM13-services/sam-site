@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import type { Materiel } from '../../types/materiel'
+import { SUBVENTION_LABELS } from '../../types/materiel'
 import MaterielSilhouette from './MaterielSilhouette'
 
 interface Props {
@@ -25,6 +26,12 @@ function MaterielCard({ materiel, delay = 0 }: Props) {
         <div className="w-full h-full transition-opacity duration-300 group-hover:opacity-60" style={{ transform: 'translateZ(0)', willChange: 'opacity' }}>
           <MaterielSilhouette id={materiel.id} variant="card" alt={materiel.nom} />
         </div>
+
+        {/* Label subvention — apparaît au hover */}
+        <span className="absolute top-3 left-2 bg-sam-yellow text-sam-black text-[10px] font-bold uppercase tracking-wider px-2 py-1
+          opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          {SUBVENTION_LABELS[materiel.subvention]}
+        </span>
 
         {/* Bouton jaune hover */}
         <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-sam-yellow flex items-center justify-center

@@ -148,6 +148,15 @@ export const SUBSIDIES = [
     eligibility: "Boulangeries, pâtisseries, meuneries",
     demande: "Sur devis ou facture acquittée",
   },
+  {
+    id: "prevention-chute",
+    name: "Prévention chute",
+    rate: "50%",
+    label: "du matériel",
+    description: "Subvention pour réduire les risques de chute dans les zones les plus exposées : locaux glissants, plateformes en hauteur, mezzanines, quais et camions.",
+    eligibility: "Agroalimentaire, logistique, transport, tous secteurs exposés",
+    demande: "Sur devis ou facture acquittée",
+  },
 ] as const
 
 // --- CTA BANDEAU FINAL ---

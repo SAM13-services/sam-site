@@ -17,13 +17,17 @@ interface Props {
   filtered: number
 }
 
-const SUBVENTIONS: Subvention[] = ['FIPU', 'TOP_BTP', 'POUSSIERE_FARINE']
+const SUBVENTIONS: Subvention[] = ['FIPU', 'TOP_BTP', 'POUSSIERE_FARINE', 'PREVENTION_CHUTE']
 const CATEGORIES: Categorie[] = [
   'equipements-transfert',
   'equipements-roulants',
   'plans-travail-reglables',
   'outils-portatifs-vibrations',
   'equipements-specifiques',
+  'sols-antiderapants',
+  'travail-en-hauteur',
+  'securite-quais',
+  'securite-camions',
 ]
 const SECTEURS: Secteur[] = [
   'sanitaire-medico-social',
