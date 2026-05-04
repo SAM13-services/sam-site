@@ -2088,6 +2088,695 @@ export const CATALOGUE: Materiel[] = [
     },
     distributeurs: [],
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // TOP BTP — ÉCHAFAUDAGES & ACCÈS EN HAUTEUR
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'echafaudage-pied-mds',
+    nom: 'Échafaudage de pied MDS',
+    description: 'Échafaudage à montage et démontage en sécurité depuis le plancher inférieur.',
+    descriptionComplete: 'L\'échafaudage de pied MDS (Montage et Démontage en Sécurité) est la solution de référence pour les travaux en façade dans le BTP. Il se distingue par son système de garde-corps intégré posé depuis le plancher inférieur, assurant une protection collective permanente à chaque niveau sans travail en hauteur non protégé. Seuls les modèles admis à la marque NF sont éligibles à la Subvention Prévention TOP BTP.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'Building2',
+    eligibilite: {
+      conception: [
+        'Admis à la marque NF — liste disponible sur le site AFNOR (NF096.pdf)',
+        'Montage et démontage des garde-corps depuis le plancher inférieur (sécurité intrinsèque)',
+        'Garde-corps latéraux et d\'extrémité tous MDS sans exception',
+        'Les garde-corps MDS représentent au minimum 20 % du montant HT total',
+        'Fabrication dans un établissement doté d\'un système de management qualité adapté',
+        'Évaluation par un organisme indépendant du fabricant',
+        'Conforme aux normes NF EN 12810-1/2 et NF EN 12811',
+        'Non concerné par un signalement « problème de prévention » CARSAT',
+      ],
+      formation: [
+        'Formation obligatoire au montage, utilisation et démontage (recommandation Cnam R.408)',
+        'Attestation de formation au travail en hauteur délivrée aux opérateurs',
+        'Notice d\'utilisation en français fournie par le fabricant',
+      ],
+      amenagement: [
+        'Installation et montage par personnel formé uniquement',
+        'Vérification de la stabilité du sol d\'appui avant installation',
+        'Contrôle du matériel avant chaque montage selon les préconisations du fabricant',
+      ],
+      exclusions: [
+        'Échafaudages montés par tubes et colliers',
+        'Échafaudages avec garde-corps provisoires de montage (non MDS)',
+        'Matériels signalés « problème de prévention » par la CARSAT',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'echafaudage-roulant-mds',
+    nom: 'Échafaudage roulant MDS',
+    description: 'Échafaudage mobile sur roulettes à montage en sécurité collective.',
+    descriptionComplete: 'L\'échafaudage roulant MDS est, par conception, à montage et démontage en sécurité collective : les garde-corps sont posés depuis le plancher inférieur ou depuis le sol. Adaptable à toutes hauteurs de travail, il permet d\'intervenir rapidement sur différentes zones du chantier tout en maintenant la protection collective des opérateurs.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'Building2',
+    eligibilite: {
+      conception: [
+        'Admis à la marque NF — liste disponible sur le site AFNOR (NF096.pdf)',
+        'Montage et démontage des garde-corps depuis le plancher inférieur ou le sol',
+        'Sécurité collective par conception (pas de travail non protégé lors du montage)',
+        'Conforme NF P 93-520, NF EN 1004 parties 1 et 2',
+        'Roulettes avec système de blocage individuel',
+        'Fabrication dans un établissement doté d\'un système de management qualité adapté',
+        'Non concerné par un signalement « problème de prévention » CARSAT',
+      ],
+      formation: [
+        'Formation obligatoire au montage, utilisation et démontage (recommandation Cnam R.457)',
+        'Attestation de formation au travail en hauteur délivrée aux opérateurs',
+        'Notice d\'utilisation en français fournie par le fabricant',
+      ],
+      amenagement: [
+        'Sol de chantier plan et stable lors de chaque utilisation',
+        'Blocage des roulettes obligatoire dès l\'arrêt de l\'échafaudage',
+        'Contrôle du matériel avant chaque montage selon les préconisations du fabricant',
+      ],
+      exclusions: [
+        'Échafaudages roulants sans garde-corps MDS intégrés',
+        'Matériels signalés « problème de prévention » par la CARSAT',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'remorque-rack-echafaudage',
+    nom: 'Remorque avec rack pour transport d\'échafaudage',
+    description: 'Remorque équipée d\'un rack de rangement pour transport sécurisé des échafaudages.',
+    descriptionComplete: 'La remorque avec rack permet le transport, le rangement et le stockage d\'un échafaudage MDS prêt à l\'emploi sur chantier. Équipée d\'au moins un essieu et d\'un dispositif d\'attelage homologué, elle simplifie la gestion des pièces et réduit les manutentions manuelles de chargement. Elle est proposée en standard par les fabricants d\'échafaudages MDS.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'Truck',
+    eligibilite: {
+      conception: [
+        'Rack de rangement des éléments constitutifs de l\'échafaudage intégré',
+        'Coffre de rangement des accessoires de montage inclus',
+        'Au moins un essieu et un dispositif d\'attelage pour tractage sur voie publique',
+        'Homologation routière — permis BE potentiellement requis selon le PTAC',
+        'Proposée par un fabricant d\'échafaudages MDS référencé',
+      ],
+      formation: [
+        'Formation à l\'attelage et au transport si permis BE nécessaire',
+        'Information sur les conditions de chargement et d\'arrimage',
+      ],
+      amenagement: [
+        'Arrimage de l\'échafaudage conforme aux règles de transport',
+        'Vérification de l\'état de la remorque avant chaque départ',
+      ],
+      exclusions: [
+        'Palettes, racks et containers non associés à une remorque',
+        'Remorques sans rack de rangement dédié à l\'échafaudage',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'escalier-acces-echafaudage',
+    nom: 'Escalier d\'accès aux échafaudages',
+    description: 'Escalier sécurisé pour l\'accès aux niveaux d\'un échafaudage MDS.',
+    descriptionComplete: 'L\'escalier d\'accès aux échafaudages permet de monter et descendre entre les niveaux d\'un échafaudage en toute sécurité. Robuste et stable, il s\'intègre facilement à l\'échafaudage MDS dont il est généralement issu du même catalogue fabricant. Il remplace les échelles d\'accès classiques et réduit significativement le risque de chute.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'ArrowUpDown',
+    eligibilite: {
+      conception: [
+        'Fabrication robuste garantissant la stabilité lors de l\'utilisation',
+        'Facilité de montage et d\'intégration à l\'échafaudage MDS',
+        'Généralement proposé par le fabricant de l\'échafaudage MDS',
+        'Marches antidérapantes',
+        'Main courante de chaque côté',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Fixation et intégration à l\'échafaudage selon les préconisations du fabricant',
+        'Vérification de la stabilité avant toute utilisation',
+      ],
+      exclusions: [
+        'Échelles simples (sans plateforme ni garde-corps)',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // TOP BTP — PROTECTIONS TRÉMIES & ACCÈS PROVISOIRES
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'plancher-provisoire-tremie',
+    nom: 'Plancher provisoire de protection de trémie',
+    description: 'Plancher préfabriqué obturant les trémies d\'escalier et d\'ascenseur avec accès sécurisé.',
+    descriptionComplete: 'Le plancher provisoire de protection de trémie est un équipement préfabriqué qui obture intégralement les ouvertures de trémie (escaliers, ascenseurs) pendant la phase chantier. Il est muni d\'un escalier ou d\'une échelle d\'accès avec trappe de fermeture. Il peut comporter en option une trappe latérale pour le passage de matériaux. Son installation prévient les chutes de hauteur sur les zones fréquemment circulées.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'Shield',
+    eligibilite: {
+      conception: [
+        'Produit préfabriqué (manufacturé) assurant l\'obturation complète de l\'ouverture',
+        'Muni d\'un escalier ou d\'une échelle d\'accès avec trappe de fermeture',
+        'Surcharge admissible mentionnée sur l\'équipement ou justifiée par note de calcul',
+        'Aucune charge ponctuelle autre que celle des utilisateurs autorisée',
+        'Conforme par analogie à la NF EN 12811 Classe 3 (200 daN/m² minimum)',
+        'Option : trappe latérale pour passage de matériaux (panneaux bois, isolants…)',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Obturation complète de la trémie sans espace résiduel',
+        'Fixation stable selon les préconisations du fabricant',
+        'Vérification avant chaque phase de travail',
+      ],
+      exclusions: [
+        'Protections non préfabriquées réalisées sur chantier',
+        'Planchers sans accès intégré (escalier ou échelle avec trappe)',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'escalier-provisoire-modulable',
+    nom: 'Escalier provisoire modulable de chantier',
+    description: 'Escalier métallique transportable pour franchissement de dénivelé sur chantier (≥ 3 m).',
+    descriptionComplete: 'L\'escalier provisoire modulable permet de franchir des dénivelés importants (hauteur minimale de franchissement de 3 m environ) sur les chantiers de construction. En aluminium ou acier galvanisé, il s\'adapte aux configurations variables de chantier grâce à son inclinaison réglable et ses marches restant horizontales en toute position. Il garantit un accès sécurisé entre niveaux dès la phase gros œuvre.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'ArrowUpDown',
+    eligibilite: {
+      conception: [
+        'Hauteur de franchissement minimale de 3 m (environ un niveau d\'habitation)',
+        'Droit ou hélicoïdal MDS',
+        'Matériau : aluminium ou acier à finition galvanisée',
+        'Installation rapide et adaptable aux configurations de chantier',
+        'Inclinaison variable avec maintien des marches horizontales en toute configuration',
+        'Marches antidérapantes',
+        'Mains courantes des deux côtés et attaches sur dalles',
+        'Surcharge admissible mentionnée sur l\'équipement',
+        'Conforme NF P 93-521, NF P 93-522 ou NF P 93-523 selon usage',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Fixation sur dalle selon les préconisations du fabricant',
+        'Vérification de la stabilité avant toute utilisation',
+      ],
+      exclusions: [
+        'Escaliers fixes permanents',
+        'Échelles simples',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // TOP BTP — PASSERELLES & QUAIS
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'passerelle-acces-garde-corps',
+    nom: 'Passerelle d\'accès avec garde-corps',
+    description: 'Passerelle sécurisée pour franchissement, accès ou chargement/déchargement sur chantier.',
+    descriptionComplete: 'La passerelle d\'accès avec garde-corps permet le cheminement sécurisé entre deux zones à dénivelé sur chantier, que ce soit pour l\'accès, le franchissement ou les opérations de chargement/déchargement. Sa largeur d\'environ 800 mm lui permet d\'être placée dans l\'encadrement d\'une porte standard. Elle est équipée de garde-corps latéraux complets et d\'un plancher antidérapant.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'ArrowRight',
+    eligibilite: {
+      conception: [
+        'Largeur d\'environ 800 mm pour mise en place dans l\'encadrement d\'une porte',
+        'Rampe inclinable aux extrémités pour récupérer le dénivelé éventuel',
+        'Plancher antidérapant',
+        'Garde-corps latéraux avec lisse, sous-lisse et plinthes',
+        'Dispositif de brochage ou similaire empêchant le glissement de la passerelle',
+        'Panneau indiquant la charge admissible',
+        'Conforme par analogie à la NF EN 12811 Classe 3 (200 daN/m² minimum)',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Stabilisation par dispositif de brochage avant toute utilisation',
+        'Vérification de la charge admissible avant chaque utilisation',
+      ],
+      exclusions: [
+        'Passerelles sans garde-corps',
+        'Planches ou éléments non préfabriqués',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'quai-mobile-chargement-chantier',
+    nom: 'Quai mobile de chargement/déchargement de chantier',
+    description: 'Quai mobile sécurisé pour accéder aux plateaux de camions lors des livraisons sur chantier.',
+    descriptionComplete: 'Le quai mobile de chargement/déchargement de chantier permet d\'accéder aux plateaux des camions de livraison et de travailler en sécurité lors des opérations de chargement/déchargement. Monté sur roues orientables, il est facilement repositionnable sur le chantier. Il est équipé de garde-corps complets et d\'un portillon d\'accès au palier.',
+    subvention: 'TOP_BTP',
+    categorie: 'securite-quais',
+    secteurs: ['construction-btp'],
+    icon: 'Truck',
+    eligibilite: {
+      conception: [
+        'Quai mobile sur roues orientables',
+        'Garde-corps avec lisse, sous-lisse et plinthes',
+        'Portillon d\'accès au palier',
+        'Garde-corps conforme NF EN 13374 classe A (sans pente)',
+        'Conforme par analogie à la NF EN 12811 Classe 3 (200 daN/m² minimum)',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Sol stable et plan lors de chaque utilisation',
+        'Blocage des roues obligatoire lors du stationnement',
+      ],
+      exclusions: [
+        'Quais fixes non mobiles',
+        'Quais sans garde-corps conformes',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'podium-lavage-benne-beton',
+    nom: 'Podium de lavage pour benne à béton',
+    description: 'Plateforme sécurisée pour le lavage des bennes à béton en hauteur après usage.',
+    descriptionComplete: 'Le podium de lavage pour benne à béton permet aux opérateurs d\'accéder en hauteur pour laver les bennes après déversement du béton, sans risque de chute. Équipé d\'anneaux de grutage pour la manutention par engin, il dispose de garde-corps complets et d\'un portillon d\'accès. Il sécurise une opération récurrente à fort risque de chute dans le secteur du BTP.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'Droplets',
+    eligibilite: {
+      conception: [
+        'Anneaux de grutage pour manutention par engin de levage',
+        'Garde-corps avec lisse, sous-lisse et plinthes',
+        'Portillon d\'accès au palier',
+        'Garde-corps conforme NF EN 13374',
+        'Conforme par analogie à la NF EN 12811 Classe 3 (200 daN/m² minimum)',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage et à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [
+        'Grutage par personnel habilité',
+        'Vérification de la stabilité et du verrouillage du portillon avant utilisation',
+      ],
+      exclusions: [
+        'Podiums sans anneaux de grutage',
+        'Accès par échelle sans plateforme protégée',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'plateforme-acces-premurs',
+    nom: 'Plateforme d\'accès aux prémurs et fonds de fouille',
+    description: 'Plateforme sur échelle sécurisée pour accès aux prémurs ou fonds de fouille.',
+    descriptionComplete: 'La plateforme d\'accès aux prémurs et fonds de fouille est un équipement combinant une échelle portative et une plateforme de travail protégée en partie haute. Elle permet d\'intervenir en sécurité pour les travaux sur prémurs (voiles préfabriqués) ou pour descendre en fond de fouille. Sa charge maximale est de 150 kg et elle est conforme à la norme NF EN 131-7 sur les échelles portables.',
+    subvention: 'TOP_BTP',
+    categorie: 'travail-en-hauteur',
+    secteurs: ['construction-btp'],
+    icon: 'MountainSnow',
+    eligibilite: {
+      conception: [
+        'Échelle munie d\'une plateforme de travail en partie haute',
+        'Protection périphérique complète de la plateforme de travail',
+        'Système d\'accrochage en haut d\'échelle',
+        'Charge maximale : 150 kg',
+        'Conforme NF EN 131-7 (échelles portables)',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage et à l\'utilisation de l\'équipement',
+      ],
+      amenagement: [
+        'Accrochage en haut d\'échelle vérifié avant utilisation',
+        'Sol d\'appui stable et dégagé',
+      ],
+      exclusions: [
+        'Échelles simples sans plateforme intégrée',
+        'Charges supérieures à 150 kg',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // TOP BTP — PROTECTION CONTRE L'ENSEVELISSEMENT
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'blindage-leger-manuportable',
+    nom: 'Blindage léger manuportable de tranchée',
+    description: 'Blindage aluminium ou composite manuportable pour sécurisation des travaux en tranchée.',
+    descriptionComplete: 'Le blindage léger manuportable est conçu pour sécuriser les travailleurs lors des travaux en tranchées contre les risques d\'ensevelissement. Fabriqué en aluminium, composite ou plastique, chaque élément pèse 25 kg maximum pour être manuporté par une seule personne. Il comporte obligatoirement une rehausse constituant un garde-corps ou est complété par un garde-corps à pinces.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'ShieldCheck',
+    eligibilite: {
+      conception: [
+        'Matériau : aluminium, composite ou plastique — hors bois et acier',
+        'Poids par élément inférieur ou égal à 25 kg (manuportable à 1 personne)',
+        'Conforme NF EN 13331-1 « Dispositifs de blindage de tranchées »',
+        'Rehausse constituant un garde-corps intégrée OU garde-corps à pinces en complément',
+        'À l\'exclusion des blindages gonflables',
+        'À l\'exclusion des blindages sans rehausse garde-corps',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement en tranchée',
+      ],
+      amenagement: [
+        'Mise en place par personnel formé à la sécurité des travaux en tranchée',
+        'Vérification de l\'intégrité du blindage avant chaque utilisation',
+      ],
+      exclusions: [
+        'Blindages gonflables',
+        'Blindages en bois ou en acier',
+        'Éléments de plus de 25 kg par pièce (non manuportables à 1 personne)',
+        'Blindages sans rehausse garde-corps ni garde-corps à pinces',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'garde-corps-blindage',
+    nom: 'Garde-corps de blindage avec pinces',
+    description: 'Garde-corps amovible fixé par pinces sur blindage de tranchée.',
+    descriptionComplete: 'Le garde-corps de blindage avec pinces complète les blindages légers de tranchée qui ne disposent pas de rehausse intégrée. Il se fixe par pinces sur les montants du blindage et assure la protection collective contre les chutes en bord de tranchée. Conforme à la norme NF EN 13374, il est un équipement à part entière éligible à la Subvention Prévention TOP BTP.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'ShieldAlert',
+    eligibilite: {
+      conception: [
+        'Conforme NF EN 13374 (garde-corps)',
+        'Système de fixation par pinces adapté aux montants du blindage',
+        'Résistance mécanique conforme aux normes de garde-corps de chantier',
+      ],
+      formation: [
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+        'Formation au montage de l\'équipement',
+      ],
+      amenagement: [
+        'Vérification du serrage des pinces avant utilisation',
+        'Compatibilité avec le blindage associé vérifiée avant achat',
+      ],
+      exclusions: [
+        'Garde-corps non conformes NF EN 13374',
+        'Systèmes de fixation sans pinces certifiés',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // TOP BTP — ORGANISATION & CONDITIONS DE TRAVAIL
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'bungalow-chantier-mobile',
+    nom: 'Bungalow de chantier mobile autonome',
+    description: 'Base vie mobile autonome pour hébergement du personnel de chantier (4 personnes min.).',
+    descriptionComplete: 'Le bungalow de chantier mobile autonome fournit aux travailleurs du BTP des conditions de repos et d\'hygiène conformes à la réglementation sur les chantiers éloignés. Mobile sur berces ou roulant, il accueille 4 personnes minimum et intègre l\'ensemble des équipements obligatoires : vestiaires, réfectoire, chauffage, réfrigérateur, sanitaires autonomes et lave-mains. Son déploiement améliore directement les conditions de travail et réduit la fatigue des opérateurs.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'Home',
+    eligibilite: {
+      conception: [
+        'Équipement mobile sur berces ou roulant',
+        'Capacité minimale : 4 personnes',
+        'Module complet : armoires vestiaires, sièges, réfectoire, réfrigérateur',
+        'Moyen de réchauffage des repas et appareil de chauffage inclus',
+        'Isolation thermique',
+        'Sanitaire autonome avec dispositif de vidange ou raccordable',
+        'Lave-mains intégré',
+        'Options possibles : auvent démontable, climatisation, ventilation',
+      ],
+      formation: [],
+      amenagement: [
+        'Raccordements (eau, électricité, évacuation) sous la responsabilité de l\'utilisateur',
+        'Mise de niveau sur le sol de chantier',
+      ],
+      exclusions: [
+        'Bungalows de décontamination pour travaux de retrait ou de confinement d\'amiante',
+        'Bungalows fixes non mobiles hors contexte lotissement maisons individuelles',
+      ],
+      precisions: [
+        'Les promoteurs, aménageurs et constructeurs pour lotissements de maisons individuelles sur terrains libres peuvent acquérir des bungalows transportables',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // POUSSIÈRES DE FARINE — ÉQUIPEMENTS À FAIBLE ÉMISSION
+  // ─────────────────────────────────────────────────────────────
+
+  {
+    id: 'petrin-capot-plein',
+    nom: 'Pétrin à capot plein transparent',
+    description: 'Pétrin neuf équipé d\'un capot plein verrouillé limitant les émissions de poussières de farine.',
+    descriptionComplete: 'Le pétrin à capot plein transparent est la solution de référence pour réduire l\'exposition des boulangers aux poussières de farine. Son protecteur verrouillé de type capot plein empêche les émissions de farine pendant le pétrissage. Conforme à la norme NF EN 453 : 2015, il contribue à prévenir les rhinites, asthmes professionnels et dermatites allergiques liés aux farines.',
+    subvention: 'POUSSIERE_FARINE',
+    categorie: 'equipements-specifiques',
+    secteurs: ['restauration-metiers-bouche'],
+    icon: 'ChefHat',
+    eligibilite: {
+      conception: [
+        'Équipement neuf obligatoirement',
+        'Conforme Directive Machines 2006/42/CE',
+        'Conforme norme NF EN 453 : 2015',
+        'Protecteur verrouillé de type capot plein transparent (§ 5.2.2 et 5.7 de la NF EN 453 : 2015)',
+        'Livré avec notice d\'instructions et déclaration CE de conformité en français',
+        'Déclaration CE mentionnant la directive 2006/42/CE et la norme NF EN 453 : 2015',
+      ],
+      formation: [
+        'Formation à l\'utilisation et à la maintenance incluse dans la prestation du fournisseur (art. R4323-1 CT)',
+        'Attestation de formation tracée pour chaque salarié utilisateur',
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Pétrins d\'occasion',
+        'Pétrins sans capot plein transparent verrouillé',
+      ],
+      precisions: [
+        'La dénomination « capot plein transparent » doit figurer dans la facture ou le devis',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'batteur-melangeur-capot-plein',
+    nom: 'Batteur / Mélangeur à capot plein transparent',
+    description: 'Batteur ou mélangeur neuf à capot plein verrouillé pour limiter les émissions de farine.',
+    descriptionComplete: 'Le batteur ou mélangeur à capot plein transparent est conçu pour réduire les émissions de poussières de farine lors des opérations de mélange en boulangerie-pâtisserie. Son protecteur verrouillé conforme à la norme NF EN 454 : 2015 contient les particules en suspension pendant le fonctionnement. Il protège les salariés contre les risques d\'allergie respiratoire et de dermatite professionnelle.',
+    subvention: 'POUSSIERE_FARINE',
+    categorie: 'equipements-specifiques',
+    secteurs: ['restauration-metiers-bouche'],
+    icon: 'ChefHat',
+    eligibilite: {
+      conception: [
+        'Équipement neuf obligatoirement',
+        'Conforme Directive Machines 2006/42/CE',
+        'Conforme norme NF EN 454 : 2015',
+        'Protecteur verrouillé de type capot plein transparent (§ 5.2.2 et 5.9 de la NF EN 454 : 2015)',
+        'Livré avec notice d\'instructions et déclaration CE de conformité en français',
+        'Déclaration CE mentionnant la directive 2006/42/CE et la norme NF EN 454 : 2015',
+      ],
+      formation: [
+        'Formation à l\'utilisation et à la maintenance incluse dans la prestation du fournisseur (art. R4323-1 CT)',
+        'Attestation de formation tracée pour chaque salarié utilisateur',
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Batteurs et mélangeurs d\'occasion',
+        'Modèles sans capot plein transparent verrouillé',
+      ],
+      precisions: [
+        'La dénomination « capot plein transparent » doit figurer dans la facture ou le devis',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'diviseuse-faible-emission',
+    nom: 'Diviseuse à faible émission de farine',
+    description: 'Diviseuse, diviseuse-formeuse ou diviseuse-bouleuse neuve équipée d\'un système anti-émission de farine de fleurage.',
+    descriptionComplete: 'La diviseuse à faible émission de farine limite la dispersion de farine de fleurage lors des opérations de division de pâton. Elle est équipée d\'un dispositif joint torique et gouttière qui empêche les émissions lors de la fermeture et de la compression, et les canalise vers un système de récupération étanche. Un revêtement anti-adhérent réduit également le besoin de fleurage.',
+    subvention: 'POUSSIERE_FARINE',
+    categorie: 'equipements-specifiques',
+    secteurs: ['restauration-metiers-bouche'],
+    icon: 'SlidersHorizontal',
+    eligibilite: {
+      conception: [
+        'Équipement neuf obligatoirement (diviseuse, diviseuse-formeuse ou diviseuse-bouleuse)',
+        'Conforme Directive Machines 2006/42/CE',
+        'Dispositif joint torique et gouttière empêchant l\'émission de farine de fleurage à l\'extérieur',
+        'Système de récupération étanche de la farine de fleurage',
+        'Revêtement anti-adhérent limitant le besoin de fleurage',
+        'Livré avec notice d\'instructions et déclaration CE de conformité en français',
+      ],
+      formation: [
+        'Formation à l\'utilisation et à la maintenance incluse dans la prestation du fournisseur (art. R4323-1 CT)',
+        'Attestation de formation tracée pour chaque salarié utilisateur',
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Diviseuses d\'occasion',
+        'Modèles sans dispositif anti-émission (joint torique + gouttière)',
+      ],
+      precisions: [
+        'La facture ou le devis doit mentionner les dispositifs empêchant l\'émission de farine',
+        'Liste de diviseuses conformes disponible sur le site du Lempa : https://www.lempa.org/la-marque/',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'farineur',
+    nom: 'Farineur (énergisé ou non)',
+    description: 'Farineur neuf pour dosage contrôlé de la farine de fleurage, limitant les émissions en suspension.',
+    descriptionComplete: 'Le farineur permet de doser et distribuer la farine de fleurage de façon contrôlée, réduisant ainsi les émissions de poussières dans l\'air ambiant en boulangerie. Il existe en version manuelle (non énergisée) ou motorisée (énergisée), cette dernière devant être conforme à la Directive Machines. Son utilisation en remplacement du farinage manuel à la main diminue significativement la concentration de poussières inhalées.',
+    subvention: 'POUSSIERE_FARINE',
+    categorie: 'equipements-specifiques',
+    secteurs: ['restauration-metiers-bouche'],
+    icon: 'Wind',
+    eligibilite: {
+      conception: [
+        'Équipement neuf obligatoirement',
+        'Version énergisée : conforme Directive Machines 2006/42/CE',
+        'Version énergisée : livré avec notice d\'instructions et déclaration CE de conformité en français',
+        'Déclaration CE mentionnant la directive 2006/42/CE (version énergisée uniquement)',
+      ],
+      formation: [
+        'Formation à l\'utilisation et à la maintenance incluse dans la prestation du fournisseur — version énergisée (art. R4323-1 CT)',
+        'Attestation de formation tracée pour chaque salarié utilisateur',
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Farineurs d\'occasion',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'aspirateur-poussiere-farine',
+    nom: 'Aspirateur mobile boulangerie/pâtisserie — poussières de farine',
+    description: 'Aspirateur neuf classe M ou H spécialement conçu pour les poussières de farine combustibles.',
+    descriptionComplete: 'L\'aspirateur mobile boulangerie/pâtisserie est conçu spécifiquement pour capter les poussières de farine combustibles dans les laboratoires de boulangerie et pâtisserie. De classe M ou H selon la norme NF EN 60335-2-69, il est équipé de filtres et accessoires antistatiques, d\'un système de décolmatage automatique en cuve fermée et de poches de vidage antistatiques. Il peut être adapté aux zones ATEX et à l\'usage dans les fours.',
+    subvention: 'POUSSIERE_FARINE',
+    categorie: 'equipements-specifiques',
+    secteurs: ['restauration-metiers-bouche'],
+    icon: 'Filter',
+    eligibilite: {
+      conception: [
+        'Équipement neuf obligatoirement',
+        'Conforme Directive Machines 2006/42/CE et norme NF EN 60335-2-69 : 2012',
+        'Destiné à l\'aspiration de poussières de farine',
+        'Classe M ou H (NF EN 60335-2-69 : 2012)',
+        'Système de décolmatage automatique cuve fermée sans émission OU manuel avec indicateur de colmatage',
+        'Changement des filtres et vidage de cuve facilité — poches en matériaux antistatiques',
+        'Conçu pour poussières combustibles',
+        'Filtres et accessoires (flexible, canne…) antistatiques',
+        'Si usage zone ATEX : adapté à la zone concernée',
+        'Si usage four : tuyau et filtre résistant 180°C, débit ≥ 300 m³/h',
+        'Livré avec notice d\'instructions et déclaration CE de conformité en français',
+      ],
+      formation: [
+        'Formation à l\'utilisation et à la maintenance incluse dans la prestation du fournisseur (art. R4323-1 CT)',
+        'Attestation de formation tracée pour chaque salarié utilisateur',
+        'Attestation sur l\'honneur de délivrance d\'une information sur les risques',
+      ],
+      amenagement: [],
+      exclusions: [
+        'Aspirateurs d\'occasion',
+        'Aspirateurs non classés M ou H',
+        'Aspirateurs non conçus pour poussières combustibles',
+      ],
+      precisions: [
+        'La facture ou le devis doit mentionner : classe de l\'aspirateur, système de décolmatage, destination (poussières de farines combustibles)',
+        'Liste de modèles conformes disponible sur le site du Lempa : https://www.lempa.org/la-marque/',
+      ],
+    },
+    distributeurs: [],
+  },
+
+  {
+    id: 'coffret-electrique-chantier',
+    nom: 'Coffret électrique temporaire de chantier',
+    description: 'Armoire électrique monophasée conforme NF C15-100 pour alimentation sécurisée sur chantier.',
+    descriptionComplete: 'Le coffret électrique temporaire de chantier fournit une alimentation électrique sécurisée et conforme aux chantiers du BTP. Il comprend une prise triphasée CEE 16A, deux prises monophasées 16A, une protection différentielle 30 mA et une mise à la terre 25 mm². La protection différentielle est contrôlée avant fourniture. Son installation doit être confiée à une personne compétente et habilitée (UTE C 18-510). Limité à 3 coffrets par entreprise.',
+    subvention: 'TOP_BTP',
+    categorie: 'equipements-specifiques',
+    secteurs: ['construction-btp'],
+    icon: 'Zap',
+    eligibilite: {
+      conception: [
+        'Bornier IP2X',
+        '1 prise de courant triphasé 16A à brochage européen / standard CEE',
+        '2 prises de courant monophasés 16A à brochage domestique',
+        'Prise de terre pour câble cuivre 25 mm²',
+        'Protection différentielle 30 mA contrôlée avant fourniture',
+        'Tension d\'utilisation : 230V – 400V',
+        'Conforme NF C15-100 et NF C 14-100',
+      ],
+      formation: [
+        'Installation confiée à une personne compétente et habilitée selon UTE C 18-510',
+        'Mise à la terre et raccordements sous la responsabilité technique de l\'utilisateur',
+      ],
+      amenagement: [
+        'Raccordement par un électricien habilité',
+        'Mise à la terre réalisée avant toute mise sous tension',
+      ],
+      exclusions: [
+        'Coffrets triphasés seuls',
+        'Armoires électriques de chantier non conformes NF C15-100',
+      ],
+      precisions: [
+        'Limitation à 3 coffrets maximum par entreprise dans le cadre de la subvention',
+      ],
+    },
+    distributeurs: [],
+  },
 ]
 
 export function filterCatalogue(
