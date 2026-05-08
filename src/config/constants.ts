@@ -105,8 +105,8 @@ export const STRENGTHS = [
 
 // --- SECTEURS ---
 export const SECTORS: { label: string; id: string }[] = [
-  { label: "Restauration & Métiers de bouche", id: "restauration-metiers-bouche" },
-  { label: "Logistique & Entreposage",         id: "logistique-entreposage" },
+  { label: "Métiers de bouche",  id: "restauration-metiers-bouche" },
+  { label: "Logistique",         id: "logistique-entreposage" },
   { label: "Construction & BTP",               id: "construction-btp" },
   { label: "Automobile",                       id: "automobile" },
   { label: "Sanitaire & Médico-social",        id: "sanitaire-medico-social" },

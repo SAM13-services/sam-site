@@ -1,7 +1,7 @@
-import { useMemo, useCallback } from 'react'
+import { useMemo, useCallback, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { Package } from 'lucide-react'
+import { Package, Grid2X2, Grid3X3 } from 'lucide-react'
 import { CATALOGUE, filterCatalogue } from '../data/materiel'
 import AnimatedSection from '../components/ui/AnimatedSection'
 import MaterielFilters from '../components/materiel/MaterielFilters'
@@ -11,8 +11,8 @@ import Button from '../components/ui/Button'
 
 const EMPTY_FILTERS: FilterState = {
   search: '',
-  subvention: '',
-  categorie: '',
+  subventions: [],
+  categories: [],
   secteurs: [],
 }
 
@@ -21,12 +21,13 @@ const INITIAL_VISIBLE = 8
 export default function MaterielEligible() {
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
+  const [mobileGrid, setMobileGrid] = useState<2 | 3>(2)
 
   // Lire les filtres depuis l'URL
   const filters: FilterState = {
     search: searchParams.get('search') ?? '',
-    subvention: (searchParams.get('subvention') ?? '') as FilterState['subvention'],
-    categorie: (searchParams.get('categorie') ?? '') as FilterState['categorie'],
+    subventions: searchParams.getAll('subventions') as FilterState['subventions'],
+    categories: searchParams.getAll('categories') as FilterState['categories'],
     secteurs: searchParams.getAll('secteurs') as FilterState['secteurs'],
   }
 
@@ -36,18 +37,18 @@ export default function MaterielEligible() {
     () =>
       filterCatalogue(CATALOGUE, {
         search: filters.search,
-        subvention: filters.subvention || undefined,
-        categorie: filters.categorie || undefined,
+        subventions: filters.subventions,
+        categories: filters.categories,
         secteurs: filters.secteurs,
       }),
-    [filters.search, filters.subvention, filters.categorie, filters.secteurs]
+    [filters.search, filters.subventions, filters.categories, filters.secteurs]
   )
 
   const handleFiltersChange = useCallback((next: FilterState) => {
     const params = new URLSearchParams()
     if (next.search) params.set('search', next.search)
-    if (next.subvention) params.set('subvention', next.subvention)
-    if (next.categorie) params.set('categorie', next.categorie)
+    next.subventions.forEach((s) => params.append('subventions', s))
+    next.categories.forEach((c) => params.append('categories', c))
     next.secteurs.forEach((s) => params.append('secteurs', s))
     if (showAll) params.set('all', '1')
     setSearchParams(params, { replace: true })
@@ -121,15 +122,33 @@ export default function MaterielEligible() {
         ) : (() => {
           const hasFilters =
             filters.search !== '' ||
-            filters.subvention !== '' ||
-            filters.categorie !== '' ||
+            filters.subventions.length > 0 ||
+            filters.categories.length > 0 ||
             filters.secteurs.length > 0
           const visible = hasFilters || showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE)
           const showButton = !hasFilters && !showAll && filtered.length > INITIAL_VISIBLE
 
           return (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+              {/* Toggle colonnes — mobile uniquement */}
+              <div className="flex justify-end items-center gap-1 mb-4 md:hidden">
+                <button
+                  onClick={() => setMobileGrid(2)}
+                  className={`p-1.5 transition-colors duration-150 ${mobileGrid === 2 ? 'bg-sam-black text-white' : 'bg-sam-gray-bg text-sam-black'}`}
+                  aria-label="2 colonnes"
+                >
+                  <Grid2X2 size={16} />
+                </button>
+                <button
+                  onClick={() => setMobileGrid(3)}
+                  className={`p-1.5 transition-colors duration-150 ${mobileGrid === 3 ? 'bg-sam-black text-white' : 'bg-sam-gray-bg text-sam-black'}`}
+                  aria-label="3 colonnes"
+                >
+                  <Grid3X3 size={16} />
+                </button>
+              </div>
+
+              <div className={`grid gap-x-3 gap-y-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 xl:grid-cols-4 ${mobileGrid === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
                 {visible.map((m, i) => (
                   <MaterielCard
                     key={m.id}

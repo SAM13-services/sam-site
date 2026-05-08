@@ -49,7 +49,7 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0 group" aria-label="SAM — Accueil">
-              <img src="/LOGO copie.svg" alt="SAM" className="h-8 w-auto group-hover:opacity-80 transition-opacity duration-200" />
+              <img src="/LOGO copie.svg" alt="SAM" className="h-6 md:h-8 w-auto group-hover:opacity-80 transition-opacity duration-200" />
             </Link>
 
             {/* Desktop Nav */}

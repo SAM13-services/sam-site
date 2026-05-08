@@ -4,12 +4,12 @@ import CountUp from '../ui/CountUp'
 
 export default function Stats() {
   return (
-    <section className="bg-sam-black py-14 md:py-18">
+    <section className="bg-sam-black py-8 md:py-18">
       <div className="px-4 md:px-[50px]">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
+        <div className="flex justify-center gap-12 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-0">
           {STATS.map((stat, i) => (
-            <AnimatedSection key={stat.value} delay={i * 80} className="lg:px-8 lg:first:pl-0 lg:last:pr-0">
-              <div className="flex flex-col gap-1 py-2">
+            <AnimatedSection key={stat.value} delay={i * 80} className={`lg:px-8 lg:first:pl-0 lg:last:pr-0${(i === 1 || i === 3) ? ' hidden sm:block' : ''}`}>
+              <div className="flex flex-col gap-1 py-2 items-center sm:items-start text-center sm:text-left">
                 <CountUp
                   value={stat.value}
                   className="font-black text-white leading-none"
@@ -22,7 +22,7 @@ export default function Stats() {
             </AnimatedSection>
           ))}
         </div>
-        <p className="text-white/50 text-[12px] mt-8 leading-relaxed">
+        <p className="hidden sm:block text-white/50 text-[12px] mt-8 leading-relaxed">
           * sous réserve d'une convention collective agréée CARSAT
         </p>
       </div>

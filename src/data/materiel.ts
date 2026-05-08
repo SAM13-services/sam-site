@@ -2783,13 +2783,13 @@ export function filterCatalogue(
   catalogue: Materiel[],
   {
     search = '',
-    subvention,
-    categorie,
+    subventions = [],
+    categories = [],
     secteurs = [],
   }: {
     search?: string
-    subvention?: string
-    categorie?: string
+    subventions?: string[]
+    categories?: string[]
     secteurs?: string[]
   }
 ): Materiel[] {
@@ -2800,8 +2800,8 @@ export function filterCatalogue(
         return false
       }
     }
-    if (subvention && item.subvention !== subvention) return false
-    if (categorie && item.categorie !== categorie) return false
+    if (subventions.length > 0 && !subventions.includes(item.subvention)) return false
+    if (categories.length > 0 && !categories.includes(item.categorie)) return false
     if (secteurs.length > 0) {
       const isTousSecteurs = item.secteurs.includes('tous-secteurs')
       const hasAny = secteurs.some((s) => item.secteurs.includes(s as any))

@@ -41,12 +41,9 @@ function MaterielCard({ materiel, delay = 0 }: Props) {
       </div>
 
       {/* Infos */}
-      <h3 className="text-sm font-medium text-sam-black leading-tight mb-1 line-clamp-1">
+      <h3 className="text-sm font-medium text-sam-black leading-tight line-clamp-1">
         {materiel.nom}
       </h3>
-      <p className="text-sm text-gray-400 leading-snug line-clamp-1">
-        {materiel.description}
-      </p>
     </Link>
   )
 }

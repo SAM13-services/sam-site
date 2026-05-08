@@ -38,11 +38,10 @@ export default function HowItWorks() {
                 <div
                   onMouseEnter={() => setHoveredIndex(i)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className="p-8 flex flex-col justify-between cursor-default"
+                  className="p-4 md:p-8 flex flex-col justify-between cursor-default md:h-[412px]"
                   style={{
                     backgroundColor: '#FCF06D',
                     width: '100%',
-                    height: '412px',
                     transform: isHovered ? 'scale(1.04)' : isDimmed ? 'scale(0.98)' : 'scale(1)',
                     opacity: isDimmed ? 0.5 : 1,
                     transition: 'transform 0.3s ease, opacity 0.3s ease',
@@ -50,22 +49,24 @@ export default function HowItWorks() {
                     position: 'relative',
                   }}
                 >
-                  {/* Numéro en haut à gauche */}
-                  <span
-                    className="font-medium text-sam-black leading-none select-none"
-                    style={{ fontSize: '64px' }}
-                  >
-                    {step.number}.
-                  </span>
+                  {/* Mobile : numéro + titre même ligne. Desktop : numéro seul en haut */}
+                  <div className="flex items-baseline gap-1.5 md:block overflow-hidden">
+                    <span className="font-bold text-sam-black leading-none select-none whitespace-nowrap text-[22px] md:text-[64px] md:font-medium">
+                      {step.number}.
+                    </span>
+                    <h3 className="font-bold text-sam-black whitespace-nowrap text-[22px] md:hidden">
+                      {step.title}
+                    </h3>
+                  </div>
 
-                  {/* Titre + description en bas */}
-                  <div>
-                    <h3 className="font-bold text-sam-black" style={{ fontSize: '24px' }}>
+                  {/* Titre desktop + description */}
+                  <div className="mt-3 md:mt-0 max-w-[82%] md:max-w-none">
+                    <h3 className="hidden md:block font-bold text-sam-black" style={{ fontSize: '24px' }}>
                       {step.title}
                     </h3>
                     <p
-                      className="text-sam-black/70"
-                      style={{ fontSize: '16px', marginTop: '30px', lineHeight: '1.3' }}
+                      className="text-sam-black/70 mt-2 md:mt-[30px]"
+                      style={{ fontSize: '16px', lineHeight: '1.3' }}
                     >
                       {step.description}
                     </p>
