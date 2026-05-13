@@ -26,8 +26,8 @@ export default function MentionsLegales() {
             <h2 className="font-bold text-sam-black text-lg mb-4">1. Éditeur du site</h2>
             <div className="flex flex-col gap-1.5">
               <p><span className="font-semibold text-sam-black">Raison sociale :</span> LA ADAR</p>
-              <p><span className="font-semibold text-sam-black">Forme juridique :</span> [À compléter — SASU / SAS / SARL…]</p>
-              <p><span className="font-semibold text-sam-black">Capital social :</span> [À compléter] €</p>
+              <p><span className="font-semibold text-sam-black">Forme juridique :</span> SAS</p>
+              <p><span className="font-semibold text-sam-black">Capital social :</span> 1 000 €</p>
               <p><span className="font-semibold text-sam-black">SIRET :</span> 942 805 128 00017</p>
               <p><span className="font-semibold text-sam-black">Siège social :</span> 41 boulevard de l'Océan, 13009 Marseille</p>
               <p><span className="font-semibold text-sam-black">Email :</span> info@sam-contact.fr</p>
