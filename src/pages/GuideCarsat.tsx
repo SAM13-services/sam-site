@@ -102,7 +102,7 @@ export default function GuideCarsat() {
       </Helmet>
 
       {/* ── Hero — fond jaune ── */}
-      <section className="bg-sam-yellow px-4 md:px-[50px] pt-32 pb-14">
+      <section className="bg-sam-yellow min-h-screen flex flex-col justify-end px-4 md:px-[50px] pt-32 pb-14">
         <AnimatedSection className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div className="flex-1">
             <span className="text-xs font-bold uppercase tracking-widest text-sam-black/50 block mb-6">
