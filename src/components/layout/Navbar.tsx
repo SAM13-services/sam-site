@@ -47,7 +47,7 @@ export default function Navbar() {
       <header
         className={`
           fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-in-out
-          ${isScrolled ? 'bg-white' : isYellowHero ? 'bg-sam-yellow/30 backdrop-blur-md' : 'bg-transparent'}
+          ${isScrolled ? 'bg-white' : 'bg-transparent backdrop-blur-sm'}
         `}
       >
         <div className="px-4 md:px-[50px]">
@@ -90,7 +90,9 @@ export default function Navbar() {
                     key={link.label}
                     to={link.path}
                     className={`text-sm font-medium transition-opacity duration-200 animated-underline ${
-                      location.pathname === link.path ? 'font-semibold' : 'text-sam-black hover:opacity-70'
+                      location.pathname === link.path
+                        ? `font-semibold text-sam-black${link.path === '/subventions-carsat' ? ' border-b border-sam-black pb-0.5' : ''}`
+                        : 'text-sam-black hover:opacity-70'
                     }`}
                   >
                     {link.label}
