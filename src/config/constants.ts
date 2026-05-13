@@ -35,6 +35,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Comment ça marche", path: "/#how-it-works" },
   { label: "Subventions", path: "/#subsidies" },
   { label: "Matériel éligible", path: "/materiel" },
+  { label: "Guide CARSAT", path: "/subventions-carsat" },
   { label: "Contact", path: "/contact" },
 ]
 

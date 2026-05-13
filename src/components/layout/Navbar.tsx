@@ -10,11 +10,17 @@ export default function Navbar() {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const isYellowHero = location.pathname === '/subventions-carsat'
+
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 0)
+    const handleScroll = () => {
+      const threshold = isYellowHero ? window.innerHeight - 80 : 0
+      setIsScrolled(window.scrollY > threshold)
+    }
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isYellowHero])
 
   useEffect(() => {
     setIsMobileOpen(false)
@@ -41,7 +47,7 @@ export default function Navbar() {
       <header
         className={`
           fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-in-out
-          ${isScrolled ? 'bg-white' : 'bg-transparent'}
+          ${isScrolled ? 'bg-white' : isYellowHero ? 'bg-sam-yellow/30 backdrop-blur-md' : 'bg-transparent'}
         `}
       >
         <div className="px-4 md:px-[50px]">
@@ -95,9 +101,18 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden md:block">
-              <Button variant="primary" size="sm" onClick={() => navigate('/pre-demande')}>
-                {"Pré-demande gratuite"}
-              </Button>
+              {location.pathname === '/subventions-carsat' ? (
+                <button
+                  onClick={() => navigate('/pre-demande')}
+                  className="inline-flex items-center justify-center font-bold tracking-wide transition-all duration-200 ease-out px-4 py-1.5 text-sm bg-sam-black text-white hover:bg-sam-black/80 active:scale-[0.98]"
+                >
+                  Pré-demande gratuite
+                </button>
+              ) : (
+                <Button variant="primary" size="sm" onClick={() => navigate('/pre-demande')}>
+                  {"Pré-demande gratuite"}
+                </Button>
+              )}
             </div>
 
             {/* Mobile toggle */}

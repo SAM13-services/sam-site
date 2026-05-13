@@ -136,6 +136,12 @@
     background-color: #FCF06D;
     color: #000000;
   }
+
+  .bg-sam-yellow ::selection,
+  .bg-sam-yellow::selection {
+    background-color: #000000;
+    color: #FCF06D;
+  }
 }
 
 @layer components {

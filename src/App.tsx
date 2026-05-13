@@ -7,6 +7,7 @@ import PreDemande from './pages/PreDemande'
 import Contact from './pages/Contact'
 import MaterielEligible from './pages/MaterielEligible'
 import MaterielProduct from './pages/MaterielProduct'
+import GuideCarsat from './pages/GuideCarsat'
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -29,6 +30,7 @@ function AppLayout() {
         {/* Future page — catalogue matériel éligible */}
         <Route path="/materiel" element={<MaterielEligible />} />
         <Route path="/materiel/:id" element={<MaterielProduct />} />
+        <Route path="/subventions-carsat" element={<GuideCarsat />} />
         {/* 404 fallback */}
         <Route path="*" element={<Home />} />
       </Routes>
