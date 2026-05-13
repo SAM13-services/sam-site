@@ -103,7 +103,7 @@ export default function GuideCarsat() {
 
       {/* ── Hero — fond jaune ── */}
       <section className="bg-sam-yellow min-h-screen flex flex-col justify-end px-4 md:px-[50px] pt-32 pb-14">
-        <AnimatedSection className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <AnimatedSection className="flex items-end justify-between gap-8">
           <div className="flex-1">
             <span className="text-xs font-bold uppercase tracking-widest text-sam-black/50 block mb-6">
               Guide CARSAT
@@ -114,18 +114,19 @@ export default function GuideCarsat() {
             >
               Tout savoir sur les subventions CARSAT
             </h1>
-            <p className="text-[17px] text-gray-700 leading-relaxed max-w-xl">
+            <p className="text-[17px] text-gray-700 leading-relaxed max-w-xl mb-10">
               La CARSAT propose de nombreux dispositifs d'aide à l'achat de matériel professionnel.
               SAM vous accompagne sur les programmes les plus accessibles et gère l'intégralité de votre dossier.
             </p>
-          </div>
-          <div className="flex-shrink-0">
             <button
               onClick={() => navigate('/pre-demande')}
-              className="inline-flex items-center justify-center font-bold tracking-wide transition-all duration-200 ease-out px-8 py-4 text-base bg-transparent text-sam-black border border-sam-black hover:bg-sam-black hover:text-white active:scale-[0.98] whitespace-nowrap"
+              className="inline-flex items-center justify-center font-bold tracking-wide transition-all duration-200 ease-out px-8 py-4 text-base bg-transparent text-sam-black border border-sam-black hover:bg-sam-black hover:text-white active:scale-[0.98]"
             >
               Vérifier mon éligibilité gratuitement
             </button>
+          </div>
+          <div className="hidden md:flex flex-shrink-0 pb-1">
+            <ChevronDown size={48} className="text-sam-black animate-bounce" strokeWidth={1.5} strokeLinecap="square" strokeLinejoin="miter" />
           </div>
         </AnimatedSection>
       </section>
