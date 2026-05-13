@@ -95,12 +95,12 @@ export default function Footer() {
             © {year} SAM — Tous droits réservés.
           </p>
           <div className="flex items-center gap-5">
-            <a href="#" className="text-xs text-gray-400 hover:text-sam-black transition-colors duration-200">
+            <Link to="/mentions-legales" className="text-xs text-gray-400 hover:text-sam-black transition-colors duration-200">
               Mentions légales
-            </a>
-            <a href="#" className="text-xs text-gray-400 hover:text-sam-black transition-colors duration-200">
+            </Link>
+            <Link to="/politique-de-confidentialite" className="text-xs text-gray-400 hover:text-sam-black transition-colors duration-200">
               {"Politique de confidentialité"}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

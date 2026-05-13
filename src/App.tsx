@@ -8,6 +8,8 @@ import Contact from './pages/Contact'
 import MaterielEligible from './pages/MaterielEligible'
 import MaterielProduct from './pages/MaterielProduct'
 import GuideCarsat from './pages/GuideCarsat'
+import MentionsLegales from './pages/MentionsLegales'
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite'
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -31,6 +33,8 @@ function AppLayout() {
         <Route path="/materiel" element={<MaterielEligible />} />
         <Route path="/materiel/:id" element={<MaterielProduct />} />
         <Route path="/subventions-carsat" element={<GuideCarsat />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         {/* 404 fallback */}
         <Route path="*" element={<Home />} />
       </Routes>
