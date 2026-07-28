@@ -16,7 +16,7 @@ export default async function handler(req: Request) {
     duerp, salaries, effectif, spst, spstName,
   } = body
 
-  await resend.emails.send({
+  const emailPromise = resend.emails.send({
     from: 'SAM Site <info@sam-contact.fr>',
     to: 'info@sam-contact.fr',
     subject: `[Pré-demande] ${societe} — ${prenom} ${nom}`,
@@ -43,6 +43,18 @@ export default async function handler(req: Request) {
       ${spstName ? `<p><strong>Nom SPST :</strong> ${spstName}</p>` : ''}
     `,
   })
+
+  const webhookPromise = fetch('https://u3.savemyleads.com/web-hooks/1513/cyjdrjwu', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      societe, siret, nom, prenom, fonction,
+      email, telephone, tva, cotisations,
+      duerp, salaries, effectif, spst, spstName,
+    }),
+  }).catch((err) => console.error('SaveMyLeads webhook failed', err))
+
+  await Promise.all([emailPromise, webhookPromise])
 
   return new Response(JSON.stringify({ success: true }), {
     status: 200,
